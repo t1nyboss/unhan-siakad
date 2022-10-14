@@ -21,11 +21,11 @@ exports.userAll = async (req, res) => {
 }
 
 exports.login = async (req, res) => {
-    const {username, password} = req.body
+    const {email, password} = req.body
     try {
         const user = await user.findOne({
             where: {
-                username: username
+                email: email
             },
         })
 
